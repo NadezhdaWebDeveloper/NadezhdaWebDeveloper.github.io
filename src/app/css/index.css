@@ -1,0 +1,368 @@
+*{
+  outline: none;
+  box-sizing: border-box;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active{
+  text-decoration: none;
+  color: #fff;
+}
+
+.blackText{
+  color: #000;
+}
+
+select{
+  padding: 10px;
+  border-radius: .5rem;
+  border-color: #ddd;
+  color: #b6b6b6;
+}
+select:hover{
+  border-color: #69b7a4;
+}
+option{
+  padding: 10px;
+}
+option:hover{
+  background-color: #eee;
+}
+
+.page .mainContent{
+  min-height: calc(100vh - 48px - 165px - 80px);
+}
+
+.popup-overlay{
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,.9);
+  z-index: 100;
+}
+
+.popup-content{
+  position: relative;
+  width: 80vh;
+  height: 80vh;
+  background-color: #fff;
+  margin: 10vh auto;
+  padding: 20px;
+  border-radius: .5rem;
+  z-index: 101;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.closePopup{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.closePopup:hover{
+  color: #69b7a4;
+}
+
+body{
+  background: #eee;
+  font-family: tahoma;
+  font-size: 16px;
+}
+
+header{
+  background-color: #567ba7;
+  color: #fff;
+}
+
+.menuItem{
+  padding: 0 16px;
+  align-self: stretch;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.menuItem:hover,
+.menuItem:hover .headerSubMenu{
+  background-color: #69b7a4;
+  z-index: 2;
+  opacity: 1;
+}
+
+.headerMenu{
+  position: relative;
+  height: 48px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.headerSubMenu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  width: 150px;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+.headerSubMenu a{
+  display: block;
+  padding: 0 16px;
+}
+
+.headerSubMenu a:hover{
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+
+  background-color: #72c6b7;
+}
+
+.logo{
+  font-family: 'GothamProMedium';
+  font-size: 2em;
+}
+
+.userInfo__id{
+  margin: 0 20px;
+}
+
+
+h2{
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+h2 span{
+  font-size: 1.6rem;
+}
+
+h2 i{
+  color: #b6b6b6;
+  margin-right: 20px;
+}
+
+.cardStyle{
+  background-color: #fff;
+  color: #b6b6b6;
+  border-radius: .5rem;
+  padding: 20px;
+  margin: 15px 0;
+  position: relative;
+}
+
+.btnStyle{
+  padding: 15px;
+  border-radius: .5rem;
+  border: 1px solid;
+  cursor: pointer;
+
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.btnStyle:hover{
+  background-color: #69b7a4;
+  color: #fff;
+  border-color: #69b7a4;
+}
+.btnStyle--small{
+  padding: 10px;
+}
+.btnStyle--сolor{
+  background-color: #567ba7;
+  color: #fff;
+  border-color: #567ba7;
+}
+.btnStyle--сolorless{
+  background-color: transparent;
+  color: #b6b6b6;
+  border-color: #b6b6b6;
+}
+
+.cardRow{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.cardRow__item{
+  flex-basis: 50% 1 1;
+}
+
+.cardStyle .btnStyle{
+  width: 100%;
+}
+
+.cardBtnsWrap{
+  display: flex;
+  opacity: 0;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-bottom: 15px;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 0 0 .5rem .5rem;
+  box-shadow: 2px 5px 10px 2px #eeeeee;
+
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.cardStyle--withBtns:hover{
+  border-radius: .5rem .5rem 0 0;
+}
+.cardStyle--withBtns:hover .cardBtnsWrap{
+  opacity: 1;
+}
+
+
+.objectServices{
+  margin: 20px 0;
+}
+.objectServicesWrap{
+  padding: 0;
+}
+
+
+footer{
+  background-color: #333333;
+  color: #fff;
+  margin-top: 80px;
+}
+.footerTop{
+  padding: 20px 0;
+}
+.footerBottom{
+  background-color: #2b2b2b;
+  padding: 20px 0;
+}
+
+.footerMenuItem{
+  border-radius: .5rem;
+
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.footerMenuItem:hover{
+  background-color: #2b2b2b;
+}
+
+.socialsNav a{
+  display: inline-block;
+  border: 2px solid #7a7a7a;
+  color: #7a7a7a;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 4px;
+}
+
+.socialsNav a i{
+  padding: 5px;
+  width: 28px;
+}
+
+.creplaLogo{
+  vertical-align: text-bottom;
+}
+
+.chartWrap{
+  margin-top: 20px;
+}
+.lineChartWrap{
+  padding: 20px 0;
+}
+.lineChartWrap .selectRow{
+  padding: 0 20px;
+}
+
+.stakedBarChartWrap .cardRow{
+  margin: 20px 0 0;
+}
+
+
+.entityFormWrap{
+  margin: 20px 0;
+}
+
+#entityForm{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#entityForm .entityForm__item{
+  display: block;
+  margin: 20px 0;
+}
+
+#entityForm .entityForm__item label{
+  display: block;
+  margin: 0;
+}
+#entityForm .entityForm__item > label{
+  font-weight: 600;
+}
+#entityForm .entityForm__item input,
+#entityForm .entityForm__item textarea,
+#entityForm .entityForm__item select{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  color: #333;
+  font-size: 16px;
+}
+#entityForm .entityForm__item input:focus,
+#entityForm .entityForm__item textarea:focus,
+#entityForm .entityForm__item select:focus{
+  border-color: #69b7a4;
+}
+
+#entityForm .entityForm__item textarea{
+  resize: vertical;
+}
+
+#entityForm .entityForm__item button{
+  background: #567ba7;
+  color: #fff;
+  min-width: 200px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#entityForm .checkboxWrap label{
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+#entityForm .checkboxWrap input{
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
