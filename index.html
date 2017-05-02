@@ -4,11 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 	<!-- <link rel="stylesheet" href="css/normalize.css"> --> <!-- CSS normalize -->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="libs/page-scroll-effect/css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/main.css"> <!-- CSS reset -->
+
 	<script src="libs/page-scroll-effect/js/modernizr.js"></script> <!-- Modernizr -->
 
 	<title>Nadezhda Kovaleva | Front-End Developer | Portfolio </title>
@@ -18,38 +20,194 @@
 <body data-hijacking="on" data-animation="opacity">
 	<section class="cd-section visible">
 		<div>
-			<h2>Nadezhda Kovaleva</h2>
-			<h3>Web / Front-End developer</h3>
+			<div class="sectionContent screen screen_first">
+				<h1 class="name">Nadezhda Kovaleva</h1>
+				<h3 class="post">Web / Front-End developer</h3>
+				<!-- <div class="btn">Давайте знакомиться</div> -->
+			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div>
-			<h2>Section 2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-				 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-				 sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<div class="sectionContent screen">
+				<div class="infoRow">
+					<div class="infoRow__item">
+						<div class="imgContainer">
+							<img src="http://conveyancingcorp.com.au/images/BusinessWomanStanding2.png" alt="">
+						</div>
+					</div>
+					<div class="infoRow__item">
+						<div class="aboutMySelf">
+							<p>Привет!</p>
+							<p>Немного обо мне</p>
+							<p>Я начала изучать программирование с 2014 года.
+								 Мой путь в сферу IT начался с известных каждому разработчику HTML и CSS.
+								 Один раз попробовав сверстать web-страницу, я поняла, что могу совместить
+								 получение денег за работу, которая приносит мне удовольствие.</p>
+							<p>В сфере web-разработки работаю с 2015 года на должности Front-End разработчик.</p>
+							<p>Узнав о возможностях платформы Node.js, паралельно ее изучаю, чтобы в дальнейшем стать
+								 Full-Stack разработчиком.</p>
+							<p>Постоянно совершенствую свои навыки и по возможности изучаю новые технологии, так как
+								хочу стать профессионалом в том, что мне нравиться.</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div>
-			<h2>Section 3</h2>
+			<div class="sectionContent screen">
+				<h2 class="screen__title">Навыки</h2>
+				<ul>
+					<li>верстка независимыми блоками (BEM-методология)</li>
+					<li>написания валидного кода</li>
+					<li>верстка с PSD в HTML</li>
+					<li>опыт верстки для мобильных устройств</li>
+					<li>Опыт применения принципов работы MVC паттерна</li>
+					<li>Кроссбраузерная, резиновая/фиксированная, адаптивная верстка
+						 (Chrome, Firefox, Safari, Opera, IE 10+);</li>
+					<li>опыт применения Bootstrap</li>
+					<li>есть навыки работы с Photoshop</li>
+					<li>CSS3 Animations</li>
+					<li>Good knowledge of chrome developer tools</li>
+					<li>Web performance (Front-End optimization)</li>
+					<li>REST API</li>
+					<li>Умею быстро переключаться между задачами.</li>
+					<li>OOP principles</li>
+					<li>Data structures and Algorithms</li>
+					<li>Применение модульной архитектуры</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div>
-			<h2>Section 4</h2>
+			<div class="sectionContent screen">
+				<h2 class="screen__title">Используемые технологии</h2>
+				<h3>В своей работе я использую технологии:</h3>
+				<ul>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>SASS (SCSS)</li>
+					<li>JavaScript, ES6</li>
+					<li>AJAX</li>
+					<li>jQuery</li>
+					<li>Node.js</li>
+					<li>GIT</li>
+					<li>task runner (Gulp, Grunt, Webpack etc)</li>
+					<li></li>
+				</ul>
+			</div>
 		</div>
 	</section>
 
 	<section class="cd-section">
 		<div>
-			<h2>Section 5</h2>
+			<div class="sectionContent screen">
+				<h2 class="screen__title">Портфолио</h2>
+				<div class="portfolio">
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">XT.ua</h4>
+								<p class="project__description">Интернет-магазин</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">Geometrics</h4>
+								<p class="project__description">PSD2HTML</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">Angular.js</h4>
+								<p class="project__description">Landing Page</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">React.js</h4>
+								<p class="project__description">SPA</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">Название проекта</h4>
+								<p class="project__description">PSD2HTML</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">Название проекта</h4>
+								<p class="project__description">PSD2HTML</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">Название проекта</h4>
+								<p class="project__description">PSD2HTML</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="project">
+							<img class="project__image" src="https://ecoelectro.com.ua/image/data/eCar/elektromobil-tesla-model-s-5.jpg" alt="">
+							<div class="project__mask">
+								<h4 class="project__title">Название проекта</h4>
+								<p class="project__description">PSD2HTML</p>
+								<div class="project__btn">
+									<a class="project__link" href="/">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
