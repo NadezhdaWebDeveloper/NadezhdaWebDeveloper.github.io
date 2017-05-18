@@ -17,7 +17,7 @@ body {
   color: #ffffff;
   /*background-color: #22283f;*/
   background-color: #000;
-  background-image: url("../../../img/chalkboard.jpg");
+  /*background-image: url("../../../img/chalkboard.jpg");*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
