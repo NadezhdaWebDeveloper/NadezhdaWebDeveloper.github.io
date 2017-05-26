@@ -112,7 +112,8 @@ body.mainContent{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    justify-content: center;
 
     @include smooth_animation(.4s);
 
@@ -142,14 +143,15 @@ body.mainContent{
   }
 
   .project__description{
-    flex-basis: 40%;
+    /*flex-basis: 40%;*/
   }
 
   .project__btn{
-    flex-basis: 30%;
+    /*flex-basis: 30%;*/
 
     position: relative;
-    top: 20px;
+    /*top: 20px;*/
+    margin: 5vh;
   }
 
   .project__link{
@@ -176,5 +178,9 @@ body.mainContent{
     .project__btn{
       top: 0;
     }
+  }
+
+  .project__tech{
+    display: inline-block;
   }
 }
