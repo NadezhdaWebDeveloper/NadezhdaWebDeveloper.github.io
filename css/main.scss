@@ -6,9 +6,9 @@
   transition: all $seconds ease-in-out;
 }
 
-body{
+body.mainContent{
   background-color: #1f1f1f;
-  background: linear-gradient(to right, #1f1f1f, #110a4e, #150b6d, #110a4e, #1f1f1f);
+  /*background: linear-gradient(to right, #1f1f1f, #110a4e, #150b6d, #110a4e, #1f1f1f);*/
 }
 
 .sectionContent{
@@ -155,10 +155,8 @@ body{
   .project__link{
     color: inherit;
     text-transform: uppercase;
-    font-size: .7em;
-    border: 1px solid #fff;
     padding: 10px;
-
+    font-size: 1.5em;
   }
 
   &:hover{
