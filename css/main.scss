@@ -6,6 +6,11 @@
   transition: all $seconds ease-in-out;
 }
 
+body{
+  background-color: #1f1f1f;
+  background: linear-gradient(to right, #1f1f1f, #110a4e, #150b6d, #110a4e, #1f1f1f);
+}
+
 .sectionContent{
   height: inherit;
   width: 100%;
@@ -68,10 +73,14 @@
   flex-wrap: wrap;
 
   .portfolio__item{
-    flex-basis: 24%;
-    background-color: blue;
-    height: 200px;
-    margin: 2px;
+    flex-basis: 32%;
+    background-color: #fff;
+    height: 25vh;
+    margin: 1px;
+
+    &.portfolio__item_m4m{
+      background-color: #567ba7;
+    }
   }
 }
 
@@ -83,8 +92,8 @@
 
   .project__image{
     display: block;
-    width: auto;
-    height: 100%;
+    width: 90%;
+    height: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
