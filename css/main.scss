@@ -151,7 +151,7 @@ body.mainContent{
 
     position: relative;
     /*top: 20px;*/
-    margin: 5vh;
+    margin: 3vh;
   }
 
   .project__link{
@@ -182,5 +182,15 @@ body.mainContent{
 
   .project__tech{
     display: inline-block;
+    width: 5vh;
+    height: auto;
+    margin: 0 5px;
+
+    img{
+      width: 100%;
+    }
   }
 }
+
+
+@import "../projects/geometric/alternative-invest.scss";
