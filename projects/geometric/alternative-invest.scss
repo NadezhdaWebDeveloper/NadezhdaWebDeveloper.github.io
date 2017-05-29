@@ -4,11 +4,6 @@ body{
 	font-size: 16px;
 	
 }
-.projectPage{
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-}
 header{
 	/*background: #444 url(../projects/geometric/content/bg_pattern.png);*/
 	/*height: 20vh;*/
@@ -17,6 +12,12 @@ header{
 	padding: 40px;
 	margin-bottom: 40px;
 
+}
+
+.projectPage{
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .projectPage__name{
@@ -36,16 +37,37 @@ header{
     background-color: #f1d9ad;
     padding: 15px;
     border-radius: .2rem;
+    border: 0;
     margin: 0 auto;
     cursor: pointer;
-}
-.projectPage__btn a{
-	color: #000;
-	text-decoration: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
 }
 
+.projectPage__usedTechnologies p,
 .projectPage__completedTasks p{
 	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+
+.projectPage__completedTasks ul{
+	padding-left: 25px;
+	list-style: disc;
+}
+
+.projectPage__usedTechnologies ul{
+	padding-left: 25px;
+}
+
+.projectPage__usedTechnologies li{
+	/*display: flex;*/
+}
+
+.projectPage__details{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .imgWrap img{
@@ -61,15 +83,34 @@ footer{
 	text-align: center;
 }
 
-.projectPage__completedTasks ul{
+
+
+
+/* --- XT --- */
+.projectPage__btn_orange{
+	background-color: #ff5722;
+}
+.projectPage__subTitle{
+	color: #fff;
+	font-size: 2em;
+	margin: 80px 0;
+	text-align: center;
+}
+.projectPage__detailsItem:first-of-type{
+	flex-basis: 28%;
+    margin-right: 50px;
+}
+.projectPage__detailsItem{
+	flex-basis: 75%;
+	color: #fff;
+}
+.projectPage__description{
+	line-height: 1.5;
+}
+.projectPage__description ul{
 	padding-left: 25px;
 	list-style: disc;
 }
-
-.projectPage__usedTechnologies ul{
-	padding-left: 25px;
-}
-
-.projectPage__usedTechnologies li{
-	/*display: flex;*/
+.projectPage__description .imgWrap{
+	margin-top: 20px;
 }
