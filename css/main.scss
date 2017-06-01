@@ -1,4 +1,3 @@
-
 // mixins
 @mixin smooth_animation ($seconds) {
   -webkit-transition: all $seconds ease-in-out;
@@ -7,8 +6,7 @@
 }
 
 body.mainContent{
-  background-color: #1f1f1f;
-  /*background: linear-gradient(to right, #1f1f1f, #110a4e, #150b6d, #110a4e, #1f1f1f);*/
+  background-color: #1f4478;
 }
 
 .sectionContent{
@@ -36,6 +34,20 @@ body.mainContent{
       font-size: 1em;
       letter-spacing: .4em;
       text-transform: uppercase;
+    }
+
+    .socials{
+      display: flex;
+      justify-content: center;
+      margin-top: 2em;
+
+      .socials__item{
+        margin: 0 .5em;
+      }
+
+      .socials__img{
+        width: 2em;
+      }
     }
   }
 
