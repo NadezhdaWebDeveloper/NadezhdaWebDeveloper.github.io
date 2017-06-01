@@ -1,0 +1,21 @@
+#chart {
+  height: 450px;
+  width: 100%;
+}
+
+.chart-tooltip {
+  background: #363B3E;
+  color: #FFFFFF;
+  position: absolute;
+  text-align: center;
+  font-size: 14px;
+  padding-left: 32px;
+  padding-right: 32px;
+  line-height: 42px;
+  border-radius: 42px;
+  z-index: 100;
+}
+
+.chart-tooltip .date {
+  color: #9BA09E;
+}

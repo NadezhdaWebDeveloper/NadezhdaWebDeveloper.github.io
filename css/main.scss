@@ -193,4 +193,93 @@ body.mainContent{
 }
 
 
+
+/*
+* Project Page Styles
+*/
+
+body{
+  background-color: #212121;
+  font-family: sans-serif;
+  font-size: 16px;
+  
+}
+header{
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.projectPage{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.projectPage__name{
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+.projectPage__info{
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  line-height: 1.5em;
+}
+.projectPage__btn{
+  width: 250px;
+  background-color: #f1d9ad;
+  padding: 15px;
+  border-radius: .2rem;
+  border: 0;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+.projectPage__usedTechnologies p,
+.projectPage__completedTasks p{
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.projectPage__completedTasks ul{
+  padding-left: 25px;
+  list-style: disc;
+}
+
+.projectPage__usedTechnologies ul{
+  padding-left: 25px;
+}
+
+.projectPage__details{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imgWrap img{
+  width: 100%;
+  border-radius: .2rem;
+  overflow: hidden;
+}
+
+footer{
+  padding: 40px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* Project - Alternative Invest */
 @import "../projects/geometric/alternative-invest.scss";
+
+/* Project - XT */
+@import "../projects/xt/xt.scss";
+
+/* Project - M4M */
+@import "../projects/m4m/m4m.scss";

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>M4M</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/popup.css">
+		<link rel="stylesheet" href="css/media.css">
+
+		<script src="https://use.fontawesome.com/20edb795b9.js"></script>
+	</head>
+	<body>
+		<div class="page">
+			<header>
+				<div class="container">
+					<div class="headerPanel">
+						<div class="logoWrap">
+							<a href="index.html" class="logo">
+								<img src="images/logo.svg" alt="">
+							</a>
+						</div>
+						<div class="headerMenu headerMenu_js">
+							<div class="mobileMenuBtn mobileMenuBtn_js"><i class="fa fa-bars" aria-hidden="true"></i></div>
+							<div class="menuPanel menuPanel_js"></div>
+							<nav class="nav headerNav headerMenu__nav">
+								<span class="closeMenu"><span class="icon-cross closeMenu__btn closeMenu__btn_js"></span></span>
+								<a class="nav-link menuItem" href="private-office.html">Объекты</a>
+								<a class="nav-link menuItem" href="finance.html">Финансы</a>
+								<a class="nav-link menuItem" href="settings.html">Настройки</a>
+								<nav class="nav footerNav footerMenuInHeader">
+									<a href="/" class="nav-link menuItem">О компании</a>
+									<a href="/" class="nav-link menuItem">Контакты</a>
+									<a href="/" class="nav-link menuItem">Новости</a>
+									<a href="/" class="nav-link menuItem">Инвесторам</a>
+									<a href="/" class="nav-link menuItem">Партнерам</a>
+									<a href="/" class="nav-link menuItem">Юридическая информация</a>
+								</nav>
+							</nav>
+						</div>
+						<div class="userInfo">
+							<a href="private-office.html"><span class="userInfo__name"><i class="fa fa-user-o" aria-hidden="true"></i> Ваня Ветров</span> <span class="userInfo__id">id 123456</span></a> <a href="index.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main class="mainContent">
+				<div class="container">
+					<!-- <div class="row">
+						<div class="col-md-12">
+						<h2><i class="fa fa-bar-chart" aria-hidden="true"></i><span>Статистика расходов</span></h2>
+						<div class="row">
+							<div class="col-md-8">
+							<div class="cardStyle lineChartWrap">
+								<div class="row selectRow">
+								<div class="col-md-6">
+									<select name="scaleItems" value={this.state.scaleItems} onChange={this.selectChanged}>
+									<option value="31">За месяц</option>
+									<option value="7">За неделю</option>
+									<option value="24">За день</option>
+									</select>
+								</div>
+								<div class="col-md-6 text-right">
+									<select>
+									<option value="dacha">Дача</option>
+									<option value="kvartira">Квартира</option>
+									</select>
+								</div>
+								</div>
+								<div>
+								<LineChart data={totalData} />
+								</div>
+							</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+							<div class="cardStyle">
+								<div class="row">
+								<div class="col-md-6">
+									<small>Начисленно:</small>
+									<h4 class="blackText">25 000 руб</h4>
+								</div>
+								<div class="col-md-6"><Link to={'/payment'}><Button class="btn btnStyle btnStyle--small btnStyle_сolorless">Оплатить</Button></Link></div>
+								</div>
+								<div class="row chartWrap">
+								<div class="col-md-6">
+									<small>Прогноз:</small><br/>
+									<span class="blackText">30 000 руб</span>
+								</div>
+								<div class="col-md-6">
+									<small>В среднем за год:</small><br/>
+									<span class="blackText">30 000 руб</span>
+								</div>
+								</div>
+								<div class="chartWrap text-center">
+								<PieChart />
+								</div>
+							</div>
+							</div>
+						</div>
+						</div>
+					</div> -->
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row align-items-center page__title">
+								<div class="col-md-8">
+									<h2><span class="icon-diagram"></span><span>Мои объекты</span></h2>
+								</div>
+								<div class="col-md-4 text-right">
+									<button class="btn btnStyle btnStyle_сolor openNewEntityPopup_js">Добавить объект</button>
+								</div>
+							</div>
+
+							<div class="row havings">
+								<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+									<div class="cardStyle objectWrap">
+										<div class="objectWrap__title">
+											<span class="objectWrap__name d-flex justify-content-between align-items-center">
+												<strong class="objectName blackText">Домик у моря</strong> 
+												<span class="objectIndicator"></span>
+											</span>
+											<small class="objectTitle">система "умный дом"</small>
+										</div>
+										<div class="row objectServices">
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Электричество</small><br/>
+														<span class="blackText">150 кВт</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Холодная вода</small><br/>
+														<span class="blackText">11 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Горячая вода</small><br/>
+														<span class="blackText">21 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Газ</small><br/>
+														<span class="blackText">15 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За месяц:</span>
+												<span class="cardRow__item text-right blackText">400 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={300} compared={400} special_color={true} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За прошлый месяц:</span>
+												<span class="cardRow__item text-right blackText">450 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={200} compared={400} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">Среднее за год:</span>
+												<span class="cardRow__item text-right blackText">350 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={250} compared={400} /> -->
+											</div>
+											</div>
+										</div>
+										<div class="row cardBtnsWrap">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="entity.html"><button class="btn btnStyle btnStyle_сolorless">Подробнее</button></a>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="payment.html"><button class="btn btnStyle btnStyle_сolor">Оплатить</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+									<div class="cardStyle objectWrap">
+										<div class="objectWrap__title">
+											<span class="objectWrap__name d-flex justify-content-between align-items-center">
+												<strong class="objectName blackText">Домик на даче</strong> 
+												<span class="objectIndicator"></span>
+											</span>
+											<small class="objectTitle">система "умный дом"</small>
+										</div>
+										<div class="row objectServices">
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Электричество</small><br/>
+														<span class="blackText">150 кВт</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Холодная вода</small><br/>
+														<span class="blackText">11 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Горячая вода</small><br/>
+														<span class="blackText">21 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Газ</small><br/>
+														<span class="blackText">15 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За месяц:</span>
+												<span class="cardRow__item text-right blackText">400 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={300} compared={400} special_color={true} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За прошлый месяц:</span>
+												<span class="cardRow__item text-right blackText">450 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={200} compared={400} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">Среднее за год:</span>
+												<span class="cardRow__item text-right blackText">350 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={250} compared={400} /> -->
+											</div>
+											</div>
+										</div>
+										<div class="row cardBtnsWrap">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="entity.html"><button class="btn btnStyle btnStyle_сolorless">Подробнее</button></a>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="payment.html"><button class="btn btnStyle btnStyle_сolor">Оплатить</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+									<div class="cardStyle objectWrap">
+										<div class="objectWrap__title">
+											<span class="objectWrap__name d-flex justify-content-between align-items-center">
+												<strong class="objectName blackText">Домик за городом</strong> 
+												<span class="objectIndicator"></span>
+											</span>
+											<small class="objectTitle">система "умный дом"</small>
+										</div>
+										<div class="row objectServices">
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Электричество</small><br/>
+														<span class="blackText">150 кВт</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Холодная вода</small><br/>
+														<span class="blackText">11 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Горячая вода</small><br/>
+														<span class="blackText">21 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Газ</small><br/>
+														<span class="blackText">15 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За месяц:</span>
+												<span class="cardRow__item text-right blackText">400 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={300} compared={400} special_color={true} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За прошлый месяц:</span>
+												<span class="cardRow__item text-right blackText">450 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={200} compared={400} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">Среднее за год:</span>
+												<span class="cardRow__item text-right blackText">350 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={250} compared={400} /> -->
+											</div>
+											</div>
+										</div>
+										<div class="row cardBtnsWrap">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="entity.html"><button class="btn btnStyle btnStyle_сolorless">Подробнее</button></a>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="payment.html"><button class="btn btnStyle btnStyle_сolor">Оплатить</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+									<div class="cardStyle objectWrap">
+										<div class="objectWrap__title">
+											<span class="objectWrap__name d-flex justify-content-between align-items-center">
+												<strong class="objectName blackText">Дом у озера</strong> 
+												<span class="objectIndicator"></span>
+											</span>
+											<small class="objectTitle">система "умный дом"</small>
+										</div>
+										<div class="row objectServices">
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Электричество</small><br/>
+														<span class="blackText">150 кВт</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Холодная вода</small><br/>
+														<span class="blackText">11 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Горячая вода</small><br/>
+														<span class="blackText">21 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Газ</small><br/>
+														<span class="blackText">15 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="stakedBarChartWrap">
+													<div class="cardRow">
+													<span class="cardRow__item">За месяц:</span>
+													<span class="cardRow__item text-right blackText">400 руб.</span>
+													</div>
+													<!-- <StakedBarChart current_indicators={300} compared={400} special_color={true} /> -->
+												</div>
+
+												<div class="stakedBarChartWrap">
+													<div class="cardRow">
+													<span class="cardRow__item">За прошлый месяц:</span>
+													<span class="cardRow__item text-right blackText">450 руб.</span>
+													</div>
+													<!-- <StakedBarChart current_indicators={200} compared={400} /> -->
+												</div>
+
+												<div class="stakedBarChartWrap">
+													<div class="cardRow">
+													<span class="cardRow__item">Среднее за год:</span>
+													<span class="cardRow__item text-right blackText">350 руб.</span>
+													</div>
+													<!-- <StakedBarChart current_indicators={250} compared={400} /> -->
+												</div>
+											</div>
+										</div>
+										<div class="row cardBtnsWrap">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="entity.html"><button class="btn btnStyle btnStyle_сolorless">Подробнее</button></a>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="payment.html"><button class="btn btnStyle btnStyle_сolor">Оплатить</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+									<div class="cardStyle objectWrap">
+										<div class="objectWrap__title">
+											<span class="objectWrap__name d-flex justify-content-between align-items-center">
+												<strong class="objectName blackText">Машина</strong> 
+												<span class="objectIndicator"></span>
+											</span>
+											<small class="objectTitle">система "умный дом"</small>
+										</div>
+										<div class="row objectServices">
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Электричество</small><br/>
+														<span class="blackText">150 кВт</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Холодная вода</small><br/>
+														<span class="blackText">11 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Горячая вода</small><br/>
+														<span class="blackText">21 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Газ</small><br/>
+														<span class="blackText">15 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За месяц:</span>
+												<span class="cardRow__item text-right blackText">400 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={300} compared={400} special_color={true} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За прошлый месяц:</span>
+												<span class="cardRow__item text-right blackText">450 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={200} compared={400} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">Среднее за год:</span>
+												<span class="cardRow__item text-right blackText">350 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={250} compared={400} /> -->
+											</div>
+											</div>
+										</div>
+										<div class="row cardBtnsWrap">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="entity.html"><button class="btn btnStyle btnStyle_сolorless">Подробнее</button></a>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+											<a href="payment.html"><button class="btn btnStyle btnStyle_сolor">Оплатить</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+									<div class="cardStyle objectWrap">
+										<div class="objectWrap__title">
+											<span class="objectWrap__name d-flex justify-content-between align-items-center">
+												<strong class="objectName blackText">Квартира</strong> 
+												<span class="objectIndicator"></span>
+											</span>
+											<small class="objectTitle">система "умный дом"</small>
+										</div>
+										<div class="row objectServices">
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Электричество</small><br/>
+														<span class="blackText">150 кВт</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Холодная вода</small><br/>
+														<span class="blackText">11 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Горячая вода</small><br/>
+														<span class="blackText">21 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-12 objectServicesWrap">
+												<div class="objectService">
+													<span class="counterIcon icon-high-voltage"></span>
+													<div class="objectService__info">
+														<small>Газ</small><br/>
+														<span class="blackText">15 м<sup>3</sup></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За месяц:</span>
+												<span class="cardRow__item text-right blackText">400 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={300} compared={400} special_color={true} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+												<span class="cardRow__item">За прошлый месяц:</span>
+												<span class="cardRow__item text-right blackText">450 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={200} compared={400} /> -->
+											</div>
+
+											<div class="stakedBarChartWrap">
+												<div class="cardRow">
+													<span class="cardRow__item">Среднее за год:</span>
+													<span class="cardRow__item text-right blackText">350 руб.</span>
+												</div>
+												<!-- <StakedBarChart current_indicators={250} compared={400} /> -->
+											</div>
+											</div>
+										</div>
+										<div class="row cardBtnsWrap">
+											<div class="col-md-6 col-sm-6 col-xs-6">
+												<a href="entity.html"><button class="btn btnStyle btnStyle_сolorless">Подробнее</button></a>
+											</div>
+											<div class="col-md-6 col-sm-6 col-xs-6">
+												<a href="payment.html"><button class="btn btnStyle btnStyle_сolor">Оплатить</button></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer>
+				<div class="footerTop">
+					<div class="container footerRow">
+						<div class="logoWrap">
+							<a href="index.html" class="logo">
+								<img src="images/logo.svg" alt="">
+							</a>
+						</div>
+						<nav class="nav footerNav footerMenu">
+							<a href="/" class="nav-link footerMenuItem">О компании</a>
+							<a href="/" class="nav-link footerMenuItem">Контакты</a>
+							<a href="/" class="nav-link footerMenuItem">Новости</a>
+							<a href="/" class="nav-link footerMenuItem">Инвесторам</a>
+							<a href="/" class="nav-link footerMenuItem">Партнерам</a>
+							<a href="/" class="nav-link footerMenuItem">Юридическая информация</a>
+						</nav>
+						<nav class="socialsNav text-right">
+							<a href="https://www.facebook.com/crepla.ua"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="https://vk.com/crepla"><i class="fa fa-vk" aria-hidden="true"></i></a>
+						</nav>
+					</div>
+				</div>
+				<div class="footerBottom">
+					<div class="container footerRow align-items-baseline">
+						<div>2к17 Все права защищены</div>
+						<div>
+							<span class="siteDevelopment">Разработка сайта: </span>
+							<a href="http://www.crepla.com/"><img class="creplaLogo" src="images/crepla-logo.png" alt="CrePla" /></a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+
+		<!-- PopUp's -->
+		<!-- <div class="popup popup_js">
+			<div class="popup-overlay">
+				<div class="popup-body">
+					<div class="popup-content">
+						<div class="popupFormWrap">
+							<h3 class="text-center">Форма для создания объекта</h3>
+							<form onSubmit={this.handleSubmit} id="popupForm" class="popupForm">
+								<span class="popupForm__item">
+									<label for="name">Название:</label>
+									<input type="text" name="name" value="" />
+								</span>
+								<span class="popupForm__item">
+									<label for="controller">Контроллер:</label>
+									<input type="text" name="controller" value="" />
+								</span>
+								<span class="popupForm__item text-center">
+									<button class="btn btnStyle btnStyle_сolor">Создать</button>
+								</span>
+							</form>
+						</div>
+					</div>
+					<span class="closePopup closePopup_js"><i class="fa fa-times" aria-hidden="true"></i></span>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="popup popup_js newEntity newEntity_js">
+			<div class="popup-overlay">
+				<div class="popup-body">
+					<div class="popup-content">
+						<div class="popupFormWrap entityFormWrap">
+							<form id="createEntity" class="popupForm entityForm">
+								<div class="screen screen_error screen_js screen_error_js">
+									<div class="screen__img">
+										<img src="images/screen-error-icon.png" alt="">
+									</div>
+									<div class="screen__content">
+										<h3>OOOPS!</h3>
+										<p>Something went wrong. Perhaps you made a mistake when choosing values.</p>
+
+										<div class="popupForm__item text-center">
+											<button class="btn btnStyle btnStyle_сolor nextStepBtn nextStepBtn_js">Try again</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="screen screen_active screen_js" data-step="1">
+									<div class="screen__content">
+										<h3>ADD OBJECT</h3>
+										<span class="popupForm__item">
+											<label for="m4mEntityName">Name object:</label>
+											<input type="text" name="m4mEntityName" value="" />
+										</span>
+										<span class="popupForm__item">
+											<label for="m4mCategory">Category:</label>
+											<select id="m4mCategory" name="m4mCategory">
+												<option value="smarthome">Smart home</option>
+												<option value="smartcar">Smart car</option>
+												<option value="smarthealth">Smart health</option>
+											</select>
+										</span>
+										<span class="popupForm__item text-center">
+											<button class="btn btnStyle btnStyle_сolor nextStepBtn nextStepBtn_js">Next step</button>
+										</span>
+									</div>
+								</div>
+								<div class="screen screen_js" data-step="2">
+									<div class="screen__img">
+										<img src="images/screen2-icon.png" alt="">
+									</div>
+									<div class="screen__content">
+										<h3>ADD CONTROLLER</h3>
+										<p>On the back of the controller is the device ID. It is also on the box with the device.</p>
+
+										<span class="popupForm__item">
+											<input type="text" name="deviceId" value="" placeholder="Enter device id" />
+										</span>
+										<span class="popupForm__item text-center">
+											<button class="btn btnStyle btnStyle_сolor nextStepBtn nextStepBtn_js">Search device</button>
+										</span>
+									</div>
+								</div>
+								<div class="screen screen_js" data-step="3">
+									<div class="screen__img">
+										<img src="images/screen2-icon.png" alt="">
+									</div>
+									<div class="screen__content">
+										<h3>SUMSUNG T1000</h3>
+										<p>To add this device, enter the mac address of the router to which the controller is connected</p>
+
+										<span class="popupForm__item">
+											<input type="text" name="deviceMac" value="" placeholder="Enter mac" />
+										</span>
+										<span class="popupForm__item text-center">
+											<button class="btn btnStyle btnStyle_сolor nextStepBtn nextStepBtn_js">Search device</button>
+										</span>
+									</div>
+								</div>
+								<div class="screen screen_js" data-step="4">
+									<div class="screen__img">
+										<img src="images/screen4-icon.png" alt="">
+									</div>
+									<div class="screen__content">
+										<h3>SUMSUNG T1000</h3>
+										<p>Choose a provider for your meters</p>
+
+										<div class="radioBtnsBlock">
+											<div class="form-check">
+												<label for="waterRadio" class="form-check-label active"><span class="counterIcon icon-high-voltage"></span> Water
+												</label>
+												<input type="radio" class="form-check-input" name="provider" id="waterRadio" value="water" checked>
+													
+											</div>
+											<div class="form-check">
+												<label for="electricityRadio" class="form-check-label"><span class="counterIcon icon-high-voltage"></span> Electricity
+												</label>
+												<input type="radio" class="form-check-input" name="provider" id="electricityRadio" value="electricity">
+													
+											</div>
+											<div class="form-check">
+												<label for="gasRadio" class="form-check-label"><span class="counterIcon icon-high-voltage"></span> Gas
+												</label>
+												<input type="radio" class="form-check-input" name="provider" id="gasRadio" value="gas">
+													
+											</div>
+										</div>
+
+										<div>
+											<select>
+												<option value="kharkiv-city-water">Kharkiv-city-water</option>
+												<option value="kharkiv-city-electricity">Kharkiv-city-Electricity</option>
+												<option value="kharkiv-city-gas">Kharkiv-city-gas</option>
+											</select>
+										</div>
+
+										<div class="checkboxBlock">
+											<div class="form-check">
+												<label for="accept-the-terms" class="form-check-label"><span class="customCheckbox"><span class="icon-check-symbol icon-ok"></span></span> accept the terms of the <a href="/">license agreement</a>
+												</label>
+										    	<input id="accept-the-terms" type="checkbox" class="form-check-input" name="accept-the-terms">
+											</div>
+										</div>
+
+										<div class="popupForm__item text-center">
+											<button class="btn btnStyle btnStyle_сolor nextStepBtn nextStepBtn_js">Search device</button>
+										</div>
+									</div>
+								</div>
+								<div class="screen screen_js" data-step="5">
+									<div class="screen__img">
+										<img src="images/screen5-icon.png" alt="">
+									</div>
+									<div class="screen__content">
+										<h3>SUCCESS</h3>
+										<p>You have succesfully registered an object in the service</p>
+
+										<div class="popupForm__item text-center">
+											<button class="btn btnStyle btnStyle_сolor nextStepBtn nextStepBtn_js">Start tracking</button>
+										</div>
+									</div>
+								</div>
+
+															
+							</form>
+						</div>
+					</div>
+					<span class="closePopup closePopup_js closeNewEntity_js"><span class="icon-cross"></span></span>
+				</div>
+			</div>
+		</div>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<script src="js/main.js"></script>
+		<script src="js/popup.js"></script>
+	</body>
+</html>
