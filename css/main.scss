@@ -1,3 +1,7 @@
+// colors
+$clr-white: #fff;
+$clr-black: #000;
+
 // mixins
 @mixin smooth_animation ($seconds) {
   -webkit-transition: all $seconds ease-in-out;
@@ -5,17 +9,29 @@
   transition: all $seconds ease-in-out;
 }
 
+::selection{
+  background-color: darken(#b88bac, 20%);
+}
+
 body.mainContent{
-  background-color: #525a88;
+  background: linear-gradient(to right, #817397, #b88bac, #817397);
+  color: $clr-white;
   font-size: 16px;
+  max-height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+section:first-of-type{
+  .sectionContent{
+    min-height: 100vh;
+  }
 }
 
 .sectionContent{
-  height: inherit;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 5em;
 }
 
 .screen{
@@ -53,7 +69,9 @@ body.mainContent{
   }
 
   .screen__title{
+    font-size: 2em;
     line-height: 3em;
+    text-align: center;
   }
 }
 
@@ -86,13 +104,14 @@ body.mainContent{
   flex-wrap: wrap;
 
   .portfolio__item{
-    flex-basis: 32%;
-    background-color: #fff;
-    height: 25vh;
+    flex-basis: 33%;
+    // background-color: $clr-white;
+    background-color: rgba($clr-white,.2);
+    height: 50vh;
     margin: 1px;
 
     &.portfolio__item_m4m{
-      background-color: #567ba7;
+      // background-color: #567ba7;
     }
   }
 }
@@ -119,7 +138,7 @@ body.mainContent{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba($clr-black,.8);
 
     text-align: center;
 
@@ -157,6 +176,7 @@ body.mainContent{
 
   .project__description{
     /*flex-basis: 40%;*/
+    font-size: 1.5em;
   }
 
   .project__btn{
@@ -172,11 +192,15 @@ body.mainContent{
     text-transform: uppercase;
     padding: 10px;
     font-size: 1.5em;
+
+    &:hover{
+      color: #b88bac;
+    }
   }
 
   &:hover{
     .project__image{
-      transform: translate(-50%, -50%) scale(1.5);
+      transform: translate(-50%, -50%) scale(1.1);
     }
 
     .project__mask{
@@ -205,6 +229,20 @@ body.mainContent{
   }
 }
 
+// Section - Profession
+.profession{
+  .profession__title{
+    font-size: 1.5em;
+    line-height: 2em;
+  }
+  
+  .profession__skills{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba($clr-white,.2);
+  }
+}
+
 
 
 /*
@@ -212,14 +250,14 @@ body.mainContent{
 */
 
 body{
-  background-color: #212121;
+  background-color: lighten($clr-black, 10%);
   font-family: sans-serif;
   font-size: 16px;
   
 }
 header{
   text-align: center;
-  color: #fff;
+  color: $clr-white;
   padding: 40px;
   margin-bottom: 40px;
 }
@@ -251,7 +289,7 @@ header{
   margin: 0 auto;
   cursor: pointer;
   outline: none;
-  color: #fff;
+  color: $clr-white;
   font-size: 1em;
 }
 

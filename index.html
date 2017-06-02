@@ -9,16 +9,22 @@
 
 	<!-- <link rel="stylesheet" href="css/normalize.css"> --> <!-- CSS normalize -->
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="libs/page-scroll-effect/css/style.css"> <!-- Resource style -->
+
+	<!-- Page Scroll Eeffect -->
+	<!-- <link rel="stylesheet" href="libs/page-scroll-effect/css/style.css"> --> <!-- Resource style -->
+	
+	<!-- CustomScrollbar -->
+	<link rel="stylesheet" href="libs/custom-scrollbar-plugin/css/jquery.mCustomScrollbar.min.css" />
+
 	<link rel="stylesheet" href="css/main.css">
 
-	<script src="libs/page-scroll-effect/js/modernizr.js"></script> <!-- Modernizr -->
+	<!-- <script src="libs/page-scroll-effect/js/modernizr.js"></script> --> <!-- Modernizr -->
 
 	<script src="https://use.fontawesome.com/20edb795b9.js"></script>
 </head>
 <!-- hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
 
-<body data-hijacking="on" data-animation="opacity" class="mainContent">
+<body data-hijacking="on" data-animation="opacity" class="mainContent mCustomScrollbar" data-mcs-theme="minimal">
 	<section class="cd-section visible">
 		<div>
 			<div class="sectionContent screen screen_first">
@@ -35,7 +41,7 @@
 
 	<section class="cd-section">
 		<div>
-			<div class="sectionContent screen">
+			<div class="screen">
 				<h2 class="screen__title">Портфолио</h2>
 				<div class="portfolio">
 					<div class="portfolio__item">
@@ -111,7 +117,7 @@
 							<img class="project__image" src="img/portfolio/m4m/logo.svg" alt="">
 							<div class="project__mask">
 								<!-- <h4 class="project__title">M4M</h4> -->
-								<p class="project__description">PSD2HTML</p>
+								<p class="project__description">Проект-презентация</p>
 								<div class="project__btn">
 									<a class="project__link" href="projects/m4m/m4m.html"><i class="fa fa-link" aria-hidden="true"></i></a>
 								</div>
@@ -137,7 +143,7 @@
 							<img class="project__image" src="img/portfolio/svaor/logo.svg" alt="">
 							<div class="project__mask">
 								<!-- <h4 class="project__title">SVAOR</h4> -->
-								<p class="project__description">Сайт</p>
+								<p class="project__description">Клуб настольного тенниса</p>
 								<div class="project__btn">
 									<a class="project__link" href="projects/svaor/svaor.html"><i class="fa fa-link" aria-hidden="true"></i></a>
 								</div>
@@ -160,9 +166,9 @@
 					</div>
 					<div class="portfolio__item">
 						<div class="project">
-							<img class="project__image" src="img/portfolio/webking/logo_.svg" alt="">
+							<img class="project__image" src="img/portfolio/webking/logo.svg" alt="">
 							<div class="project__mask">
-								<p class="project__description">Landing Page</p>
+								<p class="project__description">Веб студия</p>
 								<div class="project__btn">
 									<a class="project__link" href="projects/webking/webking.html"><i class="fa fa-link" aria-hidden="true"></i></a>
 								</div>
@@ -255,42 +261,86 @@
 	<section class="cd-section">
 		<div>
 			<div class="sectionContent screen">
-				<h2 class="screen__title">Навыки</h2>
-				<ul>
-					<!-- <li>верстка независимыми блоками (BEM-методология)</li>
-					<li>написания валидного кода</li>
-					<li>верстка с PSD в HTML</li>
-					<li>опыт верстки для мобильных устройств</li>
-					<li>Опыт применения принципов работы MVC паттерна</li>
-					<li>Кроссбраузерная, резиновая/фиксированная, адаптивная верстка
-						 (Chrome, Firefox, Safari, Opera, IE 10+);</li>
-					<li>опыт применения Bootstrap</li>
-					<li>есть навыки работы с Photoshop</li>
-					<li>CSS3 Animations</li>
-					<li>Good knowledge of chrome developer tools</li>
-					<li>Web performance (Front-End optimization)</li>
-					<li>REST API</li>
-					<li>Умею быстро переключаться между задачами.</li>
-					<li>OOP principles</li>
-					<li>Data structures and Algorithms</li>
-					<li>Применение модульной архитектуры</li> -->
-					<li>Lorem ipsum dolor ratione.</li>
-					<li>sit amet, consectetur</li>
-					<li>adipisicing elit. Sit dolore,</li>
-					<li>incidunt id nihil velit</li>
-					<li>nam est a cumque totam</li>
-					<li>dolores voluptas ea. Nobis perspiciatis</li>
-					<li>provident nisi magni</li>
-					<li>deserunt reiciendis</li>
-					<li>Lorem ipsum dolor ratione.</li>
-					<li>sit amet, consectetur</li>
-					<li>adipisicing elit. Sit dolore,</li>
-					<li>incidunt id nihil velit</li>
-					<li>nam est a cumque totam</li>
-					<li>dolores voluptas ea. Nobis perspiciatis</li>
-					<li>provident nisi magni</li>
-					<li>deserunt reiciendis</li>
-				</ul>
+				<h2 class="screen__title">Навыки и Техники</h2>
+				<div class="profession">
+					<div class="profession__skills">
+						<h5 class="profession__title">Навыки</h5>
+						<div class="profession__skillsItem">
+							<ul>
+								<li>HTML5</li>
+								<li>CSS3</li>
+								<li>Sass</li>
+								<li>Bootstrap</li>
+								<li>Git</li>
+							</ul>
+						</div>
+						<div class="profession__skillsItem">
+							<ul>
+								<li>JavaScript</li>
+								<li>jQuery</li>
+								<li>Angular</li>
+								<li>React</li>
+							</ul>
+						</div>
+						<div class="profession__skillsItem">
+							<ul>
+								<li>Валидный код</li>
+								<li>PSD2HTML</li>
+								<li>Работа с Photoshop</li>
+								<li>chrome developer tools</li>
+							</ul>
+						</div>
+					</div>
+					<div class="profession__techniques">
+						<h5 class="profession__title">Техники</h5>
+						<ul>
+							<li>MVC</li>
+							<li>AJAX</li>
+							<li>BEM</li>
+							<li>Responsive</li>
+							<li>Adaptive</li>
+							<li>Cross-browser (Chrome, Firefox, Safari, Opera, IE 10+)</li>
+							<li>REST API</li>
+							<li>OOP principles</li>
+							<li>Применение модульной архитектуры</li>
+						</ul>
+					</div>
+					<ul>
+						<!-- <li>верстка независимыми блоками (BEM-методология)</li> -->
+						<!-- <li>написания валидного кода</li> -->
+						<!-- <li>верстка с PSD в HTML</li> -->
+						<!-- <li>опыт верстки для мобильных устройств</li> -->
+						<!-- <li>Опыт применения принципов работы MVC паттерна</li> -->
+						<!-- <li>Кроссбраузерная, резиновая/фиксированная, адаптивная верстка
+							 (Chrome, Firefox, Safari, Opera, IE 10+);</li> -->
+						<!-- <li>опыт применения Bootstrap</li> -->
+						<!-- <li>есть навыки работы с Photoshop</li> -->
+						<li>CSS3 Animations</li>
+						<!-- <li>Good knowledge of chrome developer tools</li> -->
+						<li>Web performance (Front-End optimization)</li>
+						<!-- <li>REST API</li> -->
+						<li>Умею быстро переключаться между задачами.</li>
+						<!-- <li>OOP principles</li> -->
+						<li>Data structures and Algorithms</li>
+						<!-- <li>Применение модульной архитектуры</li> -->
+						<!-- <li>Lorem ipsum dolor ratione.</li>
+						<li>sit amet, consectetur</li>
+						<li>adipisicing elit. Sit dolore,</li>
+						<li>incidunt id nihil velit</li>
+						<li>nam est a cumque totam</li>
+						<li>dolores voluptas ea. Nobis perspiciatis</li>
+						<li>provident nisi magni</li>
+						<li>deserunt reiciendis</li>
+						<li>Lorem ipsum dolor ratione.</li>
+						<li>sit amet, consectetur</li>
+						<li>adipisicing elit. Sit dolore,</li>
+						<li>incidunt id nihil velit</li>
+						<li>nam est a cumque totam</li>
+						<li>dolores voluptas ea. Nobis perspiciatis</li>
+						<li>provident nisi magni</li>
+						<li>deserunt reiciendis</li> -->
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -317,17 +367,25 @@
 	</section>
 
 	
-
-	<nav>
+	<!-- Page Scroll Eeffect -->
+	<!-- <nav>
 		<ul class="cd-vertical-nav">
 			<li><a href="#0" class="cd-prev inactive">Next</a></li>
 			<li><a href="#0" class="cd-next">Prev</a></li>
 		</ul>
-	</nav> <!-- .cd-vertical-nav -->
+	</nav> --> <!-- .cd-vertical-nav -->
 
 	<script src="libs/jquery-3.2.1.min.js"></script>
-	<script src="libs/page-scroll-effect/js/velocity.min.js"></script>
-	<script src="libs/page-scroll-effect/js/velocity.ui.min.js"></script>
-	<script src="libs/page-scroll-effect/js/main.js"></script> <!-- Resource jQuery -->
+
+	<!-- CustomScrollbar -->
+	<script src="libs/custom-scrollbar-plugin/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<!-- Page Scroll Eeffect -->
+	<!-- <script src="libs/page-scroll-effect/js/velocity.min.js"></script> -->
+	<!-- <script src="libs/page-scroll-effect/js/velocity.ui.min.js"></script> -->
+	<!-- <script src="libs/page-scroll-effect/js/main.js"></script> --> <!-- Resource jQuery -->
+
+	<script src="js/main.js"></script>
+
 </body>
 </html>
