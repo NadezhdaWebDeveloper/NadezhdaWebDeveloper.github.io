@@ -104,10 +104,10 @@ section:first-of-type{
   flex-wrap: wrap;
 
   .portfolio__item{
-    flex-basis: 33%;
     // background-color: $clr-white;
-    background-color: rgba($clr-white,.2);
-    height: 50vh;
+    flex-basis: 32vw;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 33vw;
     margin: 1px;
 
     &.portfolio__item_m4m{
@@ -235,7 +235,7 @@ section:first-of-type{
     font-size: 1.5em;
     line-height: 2em;
   }
-  
+
   .profession__skills{
     display: flex;
     justify-content: space-between;
@@ -253,7 +253,7 @@ body{
   background-color: lighten($clr-black, 10%);
   font-family: sans-serif;
   font-size: 16px;
-  
+
 }
 header{
   text-align: center;
