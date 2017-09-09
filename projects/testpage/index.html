@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-top" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logoWrap" href="#"><img class="logo" src="img/logo.svg" alt="test page"></a>
+          </div>
+          <div id="search_js" class="searchBtn" data-target="search">
+            <img src="img/icons/search.svg" alt="">
+          </div>
+
+          <div class="collapse navbar-collapse" id="nav-top">
+            <ul class="nav navbar-nav navbar-right menu">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle menuItem" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="menuItem">guides</a></li>
+              <li><a href="#" class="menuItem">Community</a></li>
+              <li><a href="#" class="menuItem">Resources</a></li>
+              <li><a href="#" class="menuItem" id="contact_js" data-target="contact">contact us</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+
+    <div class="slider">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="carousel fade" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="img/slide-bg.png" alt="kuril islands">
+                <div class="carousel-caption">
+                  <div class="date">20 august 2017</div>
+                  <div class="caption">kuril islands</div>
+                </div>
+              </div>
+              <div class="item">
+                <img src="img/slide-bg.png" alt="kuril islands">
+                <div class="carousel-caption">
+                  <div class="date">30 august 2017</div>
+                  <div class="caption">kuril islands</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="body">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-sm-8 col-sm-offset-2 col-md-offset-3 col-md-6 col-md-offset-3">
+            <p class="paragraph intro">
+              The Kuril Islands or Kurile Islands in Russia's Sakhalin Oblast Lorem ipsum dolor sit amet, voluptate nisi ut aliquip ex ea commodo  in 1,300 km (180 mi) reprehenderit in voluptate velit esse nisi ut aliquip ex cillum dolore eu fugiat nulla pariatur Ocean
+            </p>
+
+            <p class="paragraph foreword">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+            </p>
+
+            <p class="paragraph geography">
+              <span class="title">Geography</span>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <div class="quote">
+              <span class="text">Those inhabitants however, though they’ve quite a bit to be dismagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+              <span class="author">Danila Antsiferov</span>
+            </div>
+
+            <div class="paragraph listOfMainIsland">
+              <span class="title">List of main islands</span>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</span>
+              <div class="table-responsive">
+                <table class="table">
+                  <colgroup>
+										<col width="20%">
+									  <col width="25%">
+										<col width="25%">
+										<col width="20%">
+									  <col width="10%">
+									</colgroup>
+                  <thead>
+                    <tr>
+                      <th>Island</th>
+                      <th>Landing point</th>
+                      <th>Other Cities</th>
+                      <th>Area (km2)</th>
+                      <th>Population</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Shumshu</th>
+                      <td>Baikovo</td>
+                      <td></td>
+                      <td>388.0</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <td>Makanrushi</th>
+                      <td>Zakat</td>
+                      <td></td>
+                      <td>50.0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Onekotan</th>
+                      <td>Mussel</td>
+                      <td>Kuroisi, Nemo</td>
+                      <td>425.0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Matua</th>
+                      <td>Sarychevo</td>
+                      <td></td>
+                      <td>52.0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>Ushishir</th>
+                      <td>Kraternya</td>
+                      <td>Ryponkicha</td>
+                      <td>5.0</td>
+                      <td>0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="latestPosts">
+      <h3 class="title">Latest Posts</h3>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-sm-offset-0">
+            <div class="post">
+              <div class="imgWrap">
+                <img src="img/post-1.png" alt="">
+              </div>
+              <div class="content">
+                <div class="heading">Travel</div>
+                <div class="title">Planning the South African Wine Vacation of Your Dreams Got Easier</div>
+                <a class="readMore" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-sm-offset-0">
+            <div class="post">
+              <div class="imgWrap">
+                <img src="img/post-2.png" alt="">
+              </div>
+              <div class="content">
+                <div class="heading">Travel</div>
+                <div class="title">Planning the South African Wine Vacation of Your Dreams Got Easier</div>
+                <a class="readMore" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-offset-1 col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-sm-offset-0">
+            <div class="post">
+              <div class="imgWrap">
+                <img src="img/post-3.png" alt="">
+              </div>
+              <div class="content">
+                <div class="heading">Travel</div>
+                <div class="title">Planning the South African Wine Vacation of Your Dreams Got Easier</div>
+                <a class="readMore" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <nav class="navbar">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav menu">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle menuItem" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="menuItem">guides</a></li>
+            <li><a href="#" class="menuItem">Community</a></li>
+            <li><a href="#" class="menuItem">Resources</a></li>
+            <li><a href="#" class="menuItem">contact us</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right socials">
+            <li><a href="#" class="social"><img src="img/icons/facebook.svg" alt="facebook"></a></li>
+            <li><a href="#" class="social"><img src="img/icons/houzz.svg" alt="houzz"></a></li>
+            <li><a href="#" class="social"><img src="img/icons/twitter.svg" alt="twitter"></a></li>
+            <li><a href="#" class="social"><img src="img/icons/instagram.svg" alt="instagram"></a></li>
+          </ul>
+        </div><!-- /.container-fluid -->
+      </nav>
+      <div class="rights text-right">Copyright &copy; 2017 Test Page. All rights reserved</div>
+    </footer>
+
+    <!-- Pop-Ups -->
+    <div id="search" class="popUp popUp-search">
+      <div class="popUpBody">
+        <div class="content">
+          <div class="formWrap">
+            <form class="searchForm" name="search_form" action="/" method="post">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon"><img class="searchIcon" src="img/icons/search.svg" alt="search icon"></span>
+                  <input type="search" class="form-control" id="inputSearch" placeholder="Search" aria-describedby="inputSearchStatus">
+                </div>
+                <span id="inputSearchStatus" class="sr-only">(success)</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="closeBtn close_js">+</div>
+    </div>
+
+    <div id="contact" class="popUp popUp-contact">
+      <div class="overlay"></div>
+      <div class="popUpBody">
+        <div class="cover"></div>
+        <div class="content">
+          <div class="formWrap">
+            <form class="contactForm" name="contact_form" action="/" method="post">
+              <div class="title">Contact Us</div>
+              <div class="form-group has-success has-feedback">
+                <input type="text" class="form-control input_validator_js" id="name" data-input-validate="name" aria-describedby="nameStatus">
+                <label for="name">Name</label>
+                <span id="nameStatus" class="error">Enter the correct name</span>
+              </div>
+
+              <div class="form-group has-warning has-feedback">
+                <input type="text" class="form-control input_validator_js" id="phone" data-input-validate="phone" aria-describedby="phoneStatus">
+                <label for="phone">Phone</label>
+                <span id="phoneStatus" class="error">The phone number format must be <br> (xxx) xx-xx-xx</span>
+              </div>
+
+              <div class="form-group has-error has-feedback">
+                <input type="text" class="form-control input_validator_js" id="email" data-input-validate="email" aria-describedby="emailStatus">
+                <label for="email">Email</label>
+                <span id="emailStatus" class="error">Enter the correct email</span>
+              </div>
+
+              <div class="form-group has-error has-feedback">
+                <textarea name="name" rows="2" cols="80" class="form-control input_validator_js" id="msg" data-input-validate="msg" aria-describedby="messageStatus"></textarea>
+                <label for="msg">Message</label>
+                <span id="messageStatus" class="error">Field can not be empty</span>
+              </div>
+              <button type="submit" name="send_msg">send</button>
+            </form>
+          </div>
+          <div class="closeBtn close_js">+</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>
