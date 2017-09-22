@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'AverageMono';
+  src: url(../fonts/AverageMono/AVERAGEMONO.otf) format("opentype"),
+  url('../fonts/AverageMono/AVERAGEMONO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AverageMono';
+  src: url('../fonts/AverageMono/AVERAGEMONO-BOLD.otf') format("opentype"),
+  url('../fonts/AverageMono/AVERAGEMONO-BOLD.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AverageMono';
+  src: url('../fonts/AverageMono/AVERAGEMONO-BOLDITALIC.otf') format("opentype"),
+  url('../fonts/AverageMono/AVERAGEMONO-BOLDITALIC.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'AverageMono';
+  src: url('../fonts/AverageMono/AVERAGEMONO-ITALIC.otf') format("opentype"),
+  url('../fonts/AverageMono/AVERAGEMONO-ITALIC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MaiolaPro';
+  src: url('../fonts/MaiolaPro/MAIOLAPRO.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaiolaPro';
+  src: url('../fonts/MaiolaPro/MAIOLAPRO-ITALIC.otf') format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'MaiolaPro';
+  src: url('../fonts/MaiolaPro/MAIOLAPRO-BOLD.otf') format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaiolaPro';
+  src: url('../fonts/MaiolaPro/MAIOLAPRO-BOLDITALIC.otf') format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-EXTRATHIN.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-EXTRATHINITALIC.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-THIN.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-THINIT.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-LIGHT.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-LIGHTITALIC.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-REGULAR.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-ITALIC.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-MEDIUM.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-MEDIUMITALIC.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-BOLD.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-BOLDITALIC.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-BLACK.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-BLACKITALIC.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-ULTRABLACK.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PFAgoraSlabPro';
+  src: url('../fonts/PFAgoraSlabPro/PFAGORASLABPRO-ULTRABLACKITALIC.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}

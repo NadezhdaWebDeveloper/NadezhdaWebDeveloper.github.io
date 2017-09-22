@@ -1,0 +1,20 @@
+.slide-project {
+
+  &__content {
+    max-width: 30%;
+    font-size: 1em;
+  }
+
+  &__title {
+    font-size: 1.2em;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: auto;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: $accent-color;
+    color: $white !important;
+  }
+}

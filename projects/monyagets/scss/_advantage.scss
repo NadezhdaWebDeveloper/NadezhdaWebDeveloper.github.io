@@ -1,0 +1,29 @@
+.advantage {
+	width: 480px;
+	margin-bottom: 40px;
+
+	&__header {
+		position: relative;
+		margin: 0 0 20px;
+    font-family: 'PFAgoraSlabPro', sans-serif;
+    font-weight: bold;
+    // font-size: $_20px;
+    line-height: 1.5;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -20px;
+			width: 28px;
+			height: 3px;
+			border-radius: 1px;
+			background-color: $accent-color;
+		}
+	}
+
+	&__text {
+		margin: 0;
+    padding: 20px;
+	}
+}

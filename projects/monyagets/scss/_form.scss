@@ -1,0 +1,332 @@
+[class$="Form"] {
+  [placeholder] {
+    color: rgb(194, 194, 194);
+  }
+
+  .form-control {
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    color: $text-color;
+    height: auto;
+    padding: 0;
+    font-family: 'AverageMono', sans-serif;
+    font-weight: 100;
+
+    &:focus {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+
+  .input-group {
+    border-bottom: 1px solid $text-color-gray;
+    padding-bottom: 20px;
+
+    &-addon {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      padding-right: 20px;
+    }
+  }
+}
+
+.contactForm {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 18px;
+    background-color: rgba(26, 33, 40, .8);
+    box-shadow: -12px 12px 20px 2px rgba(26, 33, 40, 0.5);
+    height: 90%;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  // &:after {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 100px;
+  //   height: 100px;
+  //   background: url('../img/preloader.gif') 50% no-repeat;
+  //   background-size: contain;
+  //   height: 90%;
+  //   z-index: -1;
+  //   opacity: 0;
+  // }
+
+  &.withPreloader {
+    &:before {
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+
+  .success_send {
+    position: absolute;
+    top: 30px;
+
+    img {
+      display: block;
+      margin: 40px 80px;
+      height: 90px;
+      width: 140px;
+    }
+
+    .text {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    .back-to-form {
+      line-height: 1.6;
+      margin-top: 10px;
+      display: inline-block;
+      color: $accent-color;
+      cursor: pointer;
+      padding-bottom: 2px;
+      border-bottom: 1px solid darken($white, 60%);
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    flex-basis: 48%;
+
+    &_textarea {
+      flex-basis: 100%;
+    }
+  }
+
+  label {
+    font-size: 1em;
+    line-height: 2;
+    font-weight: 400;
+    color: $text-color-transparent-immitation;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .2s;
+
+    &.top {
+      top: -15px;
+      font-size: $_14px;
+    }
+  }
+
+  .form-control:not(:empty) + label {
+    top: -15px;
+    font-size: $_14px;
+  }
+  .form-control:focus + label,
+  .form-control:focus + label {
+    top: -15px;
+    font-size: $_14px;
+    transition: .2s;
+  }
+
+  .form-group {
+    margin-top: 40px;
+    position: relative;
+
+    .error {
+      display: none;
+      font-size: $_12px;
+      line-height: 1;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 15px;
+      background: $text-color-red;
+      color: $white;
+      padding: 8px 10px;
+      border-radius: 5px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute; /* Абсолютное позиционирование */
+        left: 20px; top: -10px; /* Положение треугольника */
+        border: 5px solid transparent; /* Прозрачные границы */
+        border-bottom: 5px solid $text-color-red; /* Добавляем треугольник */
+        z-index: 1;
+      }
+    }
+
+    &.valid {
+      .error {
+        display: none;
+      }
+
+      // label span,
+      // .form-control {
+      //   border-color: green;
+      //   color: green;
+      // }
+    }
+    &.invalid {
+      .error {
+        display: inline-block;
+        color: $white;
+        z-index: 1;
+      }
+
+      label span,
+      .form-control {
+        border-color: $text-color-red;
+        color: $text-color-red;
+      }
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    max-height: 100px;
+  }
+
+  .form-control {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid $text-color-gray;
+    color: $white;
+    line-height: 2;
+
+    &:focus {
+      border-bottom: 2px solid $text-color-gray;
+    }
+  }
+
+  &__labelForPsevdoSelect {
+    position: relative !important;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid $text-color-gray;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 5px;
+      top: 6px;
+      border: 3px solid transparent;
+      border-bottom: 4px solid #ffffff;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 5px;
+      bottom: 6px;
+      border: 3px solid transparent;
+      border-top: 4px solid #ffffff;
+      transition: .4s;
+      z-index: 1;
+    }
+
+    &.focus {
+      &:before {
+        border-bottom-color: $accent-color;
+        transition: .4s;
+      }
+      &:after {
+        border-top-color: $accent-color;
+        transition: .4s;
+      }
+    }
+  }
+
+  &__psevdoSelect {
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background: $white;
+    color: $text-color;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    z-index: -1;
+    opacity: 0;
+    transition: .4s;
+
+    &.active {
+      z-index: 2;
+      opacity: 1;
+      transition: .4s;
+    }
+
+    &-item {
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: .4s;
+
+      &:hover {
+        transition: .4s;
+        background-color: lighten($accent-color, 40%);
+      }
+    }
+
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute; /* Абсолютное позиционирование */
+      left: 20px; top: -10px; /* Положение треугольника */
+      border: 5px solid transparent; /* Прозрачные границы */
+      border-bottom: 5px solid $white; /* Добавляем треугольник */
+      z-index: 1;
+    }
+  }
+
+  button {
+    margin-top: 35px;
+    border: 2px solid $accent-color;
+    border-radius: 20px;
+    background-color: transparent;
+    color: $accent-color;
+    padding: 8px 30px;
+    font-size: 1em;
+    font-family: 'AverageMono', sans-serif;
+    font-weight: 600;
+    transition: .4s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $accent-color;
+      color: $text-color;
+      transition: .4s;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

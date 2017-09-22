@@ -1,0 +1,41 @@
+.inversion {
+  .mg-contacts,
+  .mg-socials,
+  .mg-sidebar {
+
+    li {
+      .back-to-top {
+        color: $accent-color !important;
+        transition: .7s;
+      }
+
+      &.active {
+        a {
+          color: $accent-color !important;
+          transition: .7s;
+        }
+      }
+
+      a {
+        color: $white !important;
+        transition: .7s;
+      }
+    }
+  }
+
+  .mg-sidebar {
+    .mg-logo {
+      &_black {
+        z-index: -1;
+        opacity: 0;
+        transition: .7s;
+      }
+
+      &_white {
+        z-index: 1;
+        opacity: 1;
+        transition: .7s;
+      }
+    }
+  }
+}

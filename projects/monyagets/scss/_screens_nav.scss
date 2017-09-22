@@ -1,0 +1,118 @@
+.mg {
+  &-screens-nav {
+    #menu {
+      position:fixed;
+      top:0;
+      left:0;
+      height: 100vh;
+      width: 200px;
+      z-index: 70;
+      padding: 0;
+      margin:0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .dotted_line {
+        position: absolute;
+        top: 140px;
+        display: block;
+        height: 75%;
+        width: 2px;
+        border-right: 2px dotted $relief-color;
+      }
+
+      li {
+        display:block;
+        color: $text-color;
+        position: absolute;
+        transition: .7s;
+
+        &:not(:first-child) {
+          padding: 6px 0;
+        }
+
+        &:not(:last-child) {
+          max-height: 2em;
+        }
+
+        &:first-of-type {
+          top: 25px;
+        }
+
+        &:last-of-type {
+          bottom: 25px;
+        }
+
+        &.active:not(:first-child) {
+        	color: $accent-color;
+          transition: .7s;
+
+          a {
+            display:block;
+          	color: $accent-color;
+          }
+        }
+
+        &:hover {
+
+          a {
+            color: $accent-color;
+          }
+        }
+
+        &.float-anchor.active ~ .next-nav {
+          .back-to-top {
+            opacity: 1;
+            z-index: 1;
+            transition: .7s;
+            cursor: pointer;
+          }
+        }
+
+        &.float-anchor_fixed.active ~ .next-nav {
+          .back-to-top {
+            opacity: 0 ;
+            z-index: -1 ;
+          }
+        }
+
+        a {
+          display:block;
+        	text-decoration:none;
+        	color: $text-color;
+
+          &.back-to-top {
+            opacity: 0;
+            z-index: -1;
+            transition: .7s;
+            cursor: default;
+
+            border: 2px solid $accent-color;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 2em;
+            line-height: 1.6;
+            color: $accent-color;
+
+            &:hover {
+              background-color: $accent-color;
+              color: $text-color !important;
+            }
+          }
+        }
+      }
+
+      .next-nav {
+        a {
+          font-family: 'PFAgoraSlabPro', sans-serif;
+        }
+      }
+    }
+  }
+}

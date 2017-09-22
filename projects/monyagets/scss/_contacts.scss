@@ -1,0 +1,161 @@
+.contacts {
+	width: 920px;
+	color: $white;
+
+	a:link, a:visited, a:active, a:focus, a:hover {
+    text-decoration: none;
+    color: $white;
+	}
+}
+
+.contacts-top {
+	display: flex;
+	margin-bottom: 100px;
+
+	> * {
+		width: 50%;
+	}
+
+  &__header {
+    max-width: 300px;
+    margin: 0;
+    font-family: 'MaiolaPro', sans-serif;
+    font-weight: bold;
+    font-size: $_68px;
+    color: $accent-color;
+    text-transform: uppercase;
+  }
+}
+
+.contact-right {
+	position: relative;
+
+	&__address {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 3px;
+			right: -12px;
+			width: 5px;
+			height: 4px;
+			border: 2px solid $accent-color;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: -15px;
+			width: 5px;
+			height: 4px;
+			border-top: 2px solid $accent-color;
+			border-right: 2px solid $accent-color;
+		}
+	}
+
+	.switch {
+		position: absolute;
+    top: 0;
+    right: 0;
+
+		&__item {
+			color: $accent-color;
+			font-size: 1em;
+			cursor: pointer;
+
+			&.active {
+				color: lighten($text-color, 20%);
+			}
+
+			&:last-child {
+				padding-left: 20px;
+		    margin-left: 10px;
+		    border-left: 1px solid lighten($text-color, 20%);
+			}
+		}
+
+	}
+}
+
+.contacts-bottom {
+	display: flex;
+	min-height: 330px;
+
+	> * {
+		width: 50%;
+	}
+
+	.formWrap {
+		position: relative;
+
+		.contactForm {
+			position: absolute;
+		}
+	}
+
+  &__text {
+    margin: 0;
+    font-size: $_36px;
+    line-height: 1.6;
+  }
+
+	&__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	}
+}
+
+.contact-form-header {
+  font-size: $_36px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	> * {
+		outline: none;
+	}
+
+	&__item,
+	&__textarea {
+		padding: 15px 0;
+		border: none;
+		border-bottom: 2px solid lighten($text-color, 20%);
+    font-family: 'AverageMono', sans-serif;
+		background: transparent;
+	}
+
+	&__item {
+		width: 218px;
+		margin-bottom: 5px;
+	}
+
+	&__textarea {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	&__button {
+    font-family: 'AverageMono', sans-serif;
+		padding: 10px 30px;
+		border: 2px solid $accent-color;
+		border-radius: 30px;
+		background-color: transparent;
+		cursor: pointer;
+		color: $white;
+    transition: .2s;
+
+		&:hover {
+      background-color: $accent-color;
+			color: $text-color;
+			transition: .2s;
+		}
+	}
+}

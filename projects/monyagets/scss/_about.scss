@@ -1,0 +1,32 @@
+.about {
+	width: 680px;
+	text-align: center;
+
+	&__header {
+		position: relative;
+		margin-bottom: 85px;
+    font-family: 'MaiolaPro', sans-serif;
+    font-weight: bold;
+    font-size: $_68px;
+    color: $accent-color;
+    text-transform: uppercase;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -40px;
+			left: 50%;
+			transform: translatex(-50%);
+			width: 30px;
+			height: 3px;
+			border: 1px;
+			background-color: $accent-color;
+		}
+	}
+
+  &__text {
+		font-size: $_25px;
+    line-height: 1.6;
+		color: $text-color;
+	}
+}
